@@ -58,3 +58,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #define LAYOUT LAYOUT_split_3x6_3
+
+// additional macros used by burntfalafel
+enum feature_macros {
+    VM_ALT_TAB = SAFE_RANGE,
+    CTRL_ALT_DEL,
+};
+
