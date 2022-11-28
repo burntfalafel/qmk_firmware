@@ -1,7 +1,8 @@
 /*
-Copyright 2019 @foostan
-Copyright 2020 Drashna Jaelre <@drashna>
-Copyright 2021 Elliot Powell @e11i0t23
+This is the c configuration file for the keymap
+
+Copyright 2012 Jun Wako <wakojun@gmail.com>
+Copyright 2015 Jack Humbert
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,7 +20,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#ifdef RGBLIGHT_ENABLE_SHIT
+//#define USE_MATRIX_I2C
+
+/* Select hand configuration */
+
+#define MASTER_LEFT
+// #define MASTER_RIGHT
+// #define EE_HANDS
+#define SPLIT_WPM_ENABLE
+#define SPLIT_OLED_ENABLE
+
+#ifdef RGBLIGHT_ENABLE
 
 /* #   define RGBLIGHT_EFFECT_BREATHING */
 /* #   define RGBLIGHT_EFFECT_RAINBOW_MOOD */
@@ -37,7 +48,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         { 27, 27 }
 #endif
 
-#ifdef RGB_MATRIX_ENABLE_SHIT
+#ifdef RGB_MATRIX_ENABLE
 #    define RGBLED_NUM       54 // Number of LEDs
 #    define RGB_MATRIX_LED_COUNT RGBLED_NUM
 #    define RGB_MATRIX_SPLIT \
@@ -65,6 +76,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* #   define ENABLE_RGB_MATRIX_SPLASH */
 /* #   define ENABLE_RGB_MATRIX_SOLID_SPLASH */
 #endif
-
-#define SPLIT_USB_DETECT
-

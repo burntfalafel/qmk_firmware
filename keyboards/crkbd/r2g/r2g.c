@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "quantum.h"
 
-#ifdef RGB_MATRIX_ENABLE
+#ifdef RGB_MATRIX_ENABLE_SHIT
 
   // Logical Layout
   // Columns
@@ -87,7 +87,7 @@ led_config_t g_led_config = { {
 
 #endif
 
-#ifdef OLED_ENABLE
+#ifdef OLED_ENABLE_SHIT
 void oled_render_logo(void) {
     static const char PROGMEM mb_logo[] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
