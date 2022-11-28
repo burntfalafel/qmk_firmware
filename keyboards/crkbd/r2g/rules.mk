@@ -1,8 +1,9 @@
-BOOTLOADER      = atmel-dfu
-OLED_ENABLE     = yes
-OLED_DRIVER     = SSD1306
-LTO_ENABLE      = yes
-RGBLIGHT_ENABLE = yes
+BOOTLOADER      	= atmel-dfu
+OLED_ENABLE     	= yes
+OLED_DRIVER     	= SSD1306
+LTO_ENABLE      	= yes
+RGBLIGHT_ENABLE 	= yes
+WPM_ENABLE 			= yes
 
 
 SPLIT_KEYBOARD = yes
