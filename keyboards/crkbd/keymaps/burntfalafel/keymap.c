@@ -74,7 +74,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case VM_ALT_TAB:
             if (record->event.pressed) {
-                SEND_STRING(SS_DOWN(X_LGUI)SS_DOWN(X_RALT)SS_DELAY(1)SS_DOWN(X_LALT)SS_TAP(X_TAB)SS_UP(X_LALT)SS_UP(X_LGUI)SS_UP(X_RALT));
+                SEND_STRING(SS_DOWN(X_LGUI)SS_DOWN(X_RALT)SS_DELAY(1)SS_UP(X_LGUI)SS_UP(X_RALT)SS_DELAY(1)SS_DOWN(X_LALT)SS_TAP(X_TAB)SS_UP(X_LALT));
             }
             break;
         case CTRL_ALT_DEL:

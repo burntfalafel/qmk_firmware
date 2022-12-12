@@ -600,7 +600,7 @@ bool oled_task_kb(void) {
         // oled_write(wpm_str, false);
     } else {		
         render_logo();
-        oled_set_cursor(0,13);
+        oled_set_cursor(0,14);
         oled_write(get_u8_str(get_current_wpm(), '0'), false);
         // sprintf(wpm_str, "WPM  %03d", get_current_wpm());
         // oled_write(wpm_str, false);
