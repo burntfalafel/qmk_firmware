@@ -163,6 +163,21 @@ static void render_status(void) {
 }
 */
 
+// get_current_wpm is now triggered for all keycodes
+bool wpm_keycode_user(uint16_t keycode) {
+    if ((keycode >= QK_MOD_TAP && keycode <= QK_MOD_TAP_MAX) || (keycode >= QK_LAYER_TAP && keycode <= QK_LAYER_TAP_MAX) || (keycode >= QK_MODS && keycode <= QK_MODS_MAX)) {
+        keycode = keycode & 0xFF;
+    } else if (keycode > 0xFF) {
+        keycode = 0;
+    }
+    // if ((keycode >= KC_A && keycode <= KC_0) || (keycode >= KC_TAB && keycode <= KC_SLSH)) {
+    if ((keycode >= KC_A && keycode <= KC_ASSISTANT)) {
+        return true;
+    }
+
+    return false;
+}
+
 // WPM-responsive animation stuff here
 #define IDLE_FRAMES 5
 #define IDLE_SPEED 35 // below this wpm value your animation will idle
@@ -591,7 +606,6 @@ void render_logo(void) {
 	};
     oled_write_raw_P(samurai, 416);
 }
-
 
 bool oled_task_kb(void) {
     if (is_keyboard_master()) {
