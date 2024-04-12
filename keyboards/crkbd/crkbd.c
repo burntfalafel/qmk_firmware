@@ -33,7 +33,7 @@ __attribute__((weak)) const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRI
 };
 #endif
 
-#ifdef OLED_ENABLE
+#ifdef OLED_ENABLE_SHIT
 
 oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
     if (!is_keyboard_master()) {
@@ -160,4 +160,4 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
     }
     return process_record_user(keycode, record);
 }
-#endif // OLED_ENABLE
+#endif // OLED_ENABLE_SHIT
